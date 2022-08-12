@@ -266,8 +266,10 @@ console.groupCollapsed('10. Sukurkite objektą, kuriame būtų apskaičiuotas va
   const groupCarOwnersBySexReducer = (result: CarOwnerCountBySex, person: Person): CarOwnerCountBySex => {
     if (!person.hasCar) return result;
 
+    // eslint-disable-next-line no-param-reassign
     if (!result[person.sex]) result[person.sex] = 0;
 
+    // eslint-disable-next-line no-param-reassign
     result[person.sex] = result[person.sex] as number + 1;
 
     return result;
