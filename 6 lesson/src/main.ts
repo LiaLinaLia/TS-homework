@@ -158,7 +158,8 @@ console.group(`
     workers: Worker[],
   };
 
-  const isWorker = (person: Person): person is Worker => (person as Worker).avgMonthlyPay !== undefined;
+  const isWorker = (person: Person): person is Worker => (person as Worker)
+    .avgMonthlyPay !== undefined;
 
   const isStudent = (person: Person): person is Student => {
     const student = person as Student;
